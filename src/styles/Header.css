@@ -1,0 +1,16 @@
+.Header__Container{
+    width: 100vw;
+    height: 100px;
+    background-color: var(--red);
+    display: flex;
+    align-items: center;
+}
+
+.Header__Logo {
+    height: 80px;
+    
+}
+
+.Header__Link {
+    font-family: ;
+}

@@ -1,0 +1,23 @@
+ @font-face {
+    font-family: 'League Gothic';
+    src: url("../fonts/LeagueGotic.otf") format('otf');
+} 
+
+:root {
+    --red: #EE171F;
+    --light-blue: #0A43B2;
+    --dark-blue: #032059;
+    --light-pink: #F2EAE4;
+    --black: #212121;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
