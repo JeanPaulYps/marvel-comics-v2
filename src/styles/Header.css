@@ -8,9 +8,28 @@
 
 .Header__Logo {
     height: 80px;
-    
+    margin-left: 32px;
 }
 
 .Header__Link {
-    font-family: ;
+    font-family: League Gothic;
+    font-size: 40px;
+    color: var(--light-pink);
+    margin: 0 32px;
+}
+
+.Header__Icon { 
+    width: 32px;
+    margin-right: 8px;
+}
+
+.Header__Button {
+    font-family: League Gothic;
+    font-size: 40px;
+    color: var(--light-pink);
+    margin: 0 32px;
+}
+
+.Header__Actions {
+    margin-left: auto;
 }
