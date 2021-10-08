@@ -3,8 +3,20 @@
     src: url("../fonts/LeagueGotic.otf");
 } 
 
+@font-face {
+    font-family: 'Gothic A1';
+    src: url("../fonts/GothicA1-Regular.ttf");
+} 
+
+@font-face {
+    font-family: 'Gothic A1';
+    src: url("../fonts/GothicA1-ExtraBold.ttf");
+    font-weight: 800;
+} 
+
 :root {
     --red: #EE171F;
+    --light-red: #ED2F36;
     --light-blue: #0A43B2;
     --dark-blue: #032059;
     --light-pink: #F2EAE4;
@@ -13,6 +25,7 @@
 
 html {
     font-size: 62.5%;
+    background-color: var(--light-pink);
 }
 
 * {
