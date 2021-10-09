@@ -1,0 +1,1 @@
+export { marvelFetch } from './marvelFetch';

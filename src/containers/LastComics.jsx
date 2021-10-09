@@ -1,7 +1,18 @@
-import React from 'react';
-import '../styles/LastComics.css'
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchLastComics } from '../redux';
+import '../styles/LastComics.css';
+
 
 function LastComics() {
+    const dispatch = useDispatch();
+    useEffect(()=>{
+        const getData = async () => {
+            dispatch(fetchLastComics());
+        }
+        getData();
+    },[dispatch])
+    
     return (
         <div className="LastComics">
             <div className="LastComics__Item">
