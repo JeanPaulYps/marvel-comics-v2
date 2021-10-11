@@ -4,11 +4,11 @@ import { fetchLastComics } from "../services/lastComicsFetch";
 
 const filterComicAttributesToShow = (comics) => {
     let filteredComicAttributes = [];
-    for(const {title, thumbnail, creators} of comics) {
+    for(const {id, title, thumbnail, creators} of comics) {
         const {extension, path: imagePath} = thumbnail;
         const creatorName = (creators.available > 0) ? creators.items[0].name : "Author not available";
         const coverURL = `${imagePath}.${extension}`;
-        const filteredAttributes = { title: title, creatorName: creatorName, coverURL: coverURL };
+        const filteredAttributes = {id: id, title: title, creatorName: creatorName, coverURL: coverURL };
         filteredComicAttributes = [...filteredComicAttributes, filteredAttributes];
     }
     return filteredComicAttributes;

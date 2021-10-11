@@ -1,18 +1,14 @@
 .LastComics {
     display: grid;
     width: 80vw;
-    margin: 0 auto;
+    margin: 48px auto;
     grid-template-columns: repeat(auto-fit, 196px);
     column-gap: 36px;
     row-gap: 24px;
-    padding-top: 48px;
     justify-content: center;
-
 }
 
-.LastComics__Item {
-    height: 394px;
-    
+.LastComics__Item {    
     font-size: 0;
 }
 
