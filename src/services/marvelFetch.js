@@ -18,8 +18,14 @@ const marvelFetch = async (route, additionalParameters) => {
     };
 
     const completeURL = `${URL}/${route}`;
-    const request = await axios.get(completeURL, {params: params} );
-    return request;
+    try {
+        const request = await axios.get(completeURL, {params: params} );
+        return request;
+    }
+    catch (error) {
+        console.error(error);
+    }
+
 }
 
 export {marvelFetch, };
