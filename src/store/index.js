@@ -1,3 +1,4 @@
 export { store } from "./configureStore";
-export {lastComics, fetchLastComics} from './lastComics';
+export { lastComics } from './lastComics';
+export { shoppingCartSlice } from './shoppingCart';
 

@@ -28,8 +28,24 @@
     font-size: 40px;
     color: var(--light-pink);
     margin: 0 32px;
+    display: inline;
+    position: relative;
 }
 
 .Header__Actions {
     margin-left: auto;
+}
+
+.Header__Counter {
+    font-size: 20px;    
+    background-color: var(--light-pink);
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    color: var(--light-blue);
+    border-radius: 12px;
+    text-align: center;
+    right: -20px;
+    top: -10px;
+    vertical-align: middle;
 }

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchLastComics } from "../services/lastComicsFetch";
+import { fetchLastComics } from "../services";
 
 
 const filterComicAttributesToShow = (comics) => {
@@ -44,4 +44,4 @@ const lastComics = createSlice({
     }
 });
 
-export {lastComics, fetchLastComics};
+export {lastComics, };
