@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchLastComics } from '../redux';
-import { Loader } from './Loader';
-import { ComicItem } from './ComicItem';
+import { fetchLastComics } from '../store';
+import { Loader, ComicItem } from '../containers';
 import '../styles/LastComics.css';
 
 

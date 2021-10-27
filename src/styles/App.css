@@ -1,16 +1,16 @@
  @font-face {
     font-family: 'League Gothic';
-    src: url("../fonts/LeagueGotic.otf");
+    src: url("./fonts/LeagueGotic.otf");
 } 
 
 @font-face {
     font-family: 'Gothic A1';
-    src: url("../fonts/GothicA1-Regular.ttf");
+    src: url("./fonts/GothicA1-Regular.ttf");
 } 
 
 @font-face {
     font-family: 'Gothic A1';
-    src: url("../fonts/GothicA1-ExtraBold.ttf");
+    src: url("./fonts/GothicA1-ExtraBold.ttf");
     font-weight: 800;
 } 
 

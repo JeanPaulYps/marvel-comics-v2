@@ -1,7 +1,7 @@
 import { Provider } from "react-redux";
 import { Header } from "./containers/Header";
-import { LastComics } from "./containers/LastComics";
-import { store } from "./redux";
+import { LastComics } from "./pages/LastComics";
+import { store } from "./store";
 
 
 
