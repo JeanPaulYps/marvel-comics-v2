@@ -20,6 +20,12 @@
     font-weight: 800;
 } 
 
+@font-face {
+    font-family: 'Gothic A1';
+    src: url("./fonts/GothicA1-Light.ttf");
+    font-weight: 300;
+} 
+
 :root {
     --red: #EE171F;
     --light-red: #ED2F36;
@@ -27,6 +33,8 @@
     --dark-blue: #032059;
     --light-pink: #F2EAE4;
     --black: #212121;
+    --salmon: #E8A0A3;
+    
 }
 
 html {

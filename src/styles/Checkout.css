@@ -1,0 +1,92 @@
+.Checkout {
+    width: 80vw;
+    margin: 48px auto;
+}
+
+.Checkout__Title {
+    font-family: League Gothic;
+    font-size: 40px;
+    font-weight: normal;
+    color: var(--black);
+}
+
+.Cart {
+    display: flex;
+    flex-direction: column;
+}
+
+.Item {
+    height: 200px;
+    background-color: var(--salmon);
+    width: 100%;
+    margin: 24px 0;
+    border-radius: 32px;
+    padding: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.Item__Image {
+    height: 100%;
+    width: 125px;
+    background-color: turquoise;
+    display: block;
+}
+
+.Item__Description {
+    font-family: Gothic A1;
+    margin: 30px 30px;
+}
+
+
+.Item__Title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.Item__Author {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.Item__QuantityModification {
+    font-size: 36px;
+    font-family: Gothic A1;
+    outline: 3px solid var(--light-pink);
+    color: var(--light-pink);
+    height: 40px;
+    font-weight: bold;
+    margin-left: auto;
+    display: flex;
+    
+}
+
+.Item__QuantityButton {
+    font-size: 36px;
+    font-weight: lighter;
+    font-family: Gothic A1;
+    border: 0;
+    padding: 0 8px;
+    background-color: var(--salmon);
+    color: var(--light-pink);
+}
+
+.Item__QuantityButton:hover{
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.Item__Quantity {
+    margin: 0 8px;
+}
+
+.Item__DeleteIcon {
+    margin-left: 40px;
+}
+
+.Item__Price {
+    font-family: Gothic A1;
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 80px;
+}

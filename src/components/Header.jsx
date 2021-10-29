@@ -1,12 +1,15 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import '../styles/Header.css';
 
 function Header() {
     const shoppingCart = useSelector(state => state.shoppingCart.comicsInCart);
     return (
         <div className="Header__Container">
-            <img src={`${process.env.PUBLIC_URL}/MarvelLogo.svg`} alt="" className="Header__Logo" />
+            <Link to="/">
+                <img src={`${process.env.PUBLIC_URL}/MarvelLogo.svg`} alt="" className="Header__Logo" />
+            </Link>
             <p className="Header__Link"> CHARACTERS </p>
             <p className="Header__Link"> CREATORS </p>
             <p className="Header__Link"> EVENTS </p>
@@ -15,11 +18,13 @@ function Header() {
                 <span> Search comic </span>
                 
             </div>
-            <div className="Header__Button">
-                <img src={`${process.env.PUBLIC_URL}/ShoppingCart.svg`} alt="" className="Header__Icon" />
-                <span> Shopping cart </span>
-                <span className="Header__Counter" >{shoppingCart.length} </span>
-            </div>
+            <Link className="Header__Button" to="/checkout">
+                <div >
+                    <img src={`${process.env.PUBLIC_URL}/ShoppingCart.svg`} alt="" className="Header__Icon" />
+                    <span className="Header__text"> Shopping cart </span>
+                    <span className="Header__Counter" >{shoppingCart.length} </span>
+                </div>
+            </Link>
 
         </div>
     )
