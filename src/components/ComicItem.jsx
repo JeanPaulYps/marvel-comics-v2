@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { shoppingCartSlice } from '../store';
 import '../styles/ComicItem.css';
 
-function ComicItem({ id, coverURL, title, creatorName }) {
+function ComicItem({ id, coverURL, title, creatorName, price }) {
     const dispatch = useDispatch();
     const { addComicToCart } = shoppingCartSlice.actions;
     const handleAddToCart = () => {    
@@ -11,7 +11,8 @@ function ComicItem({ id, coverURL, title, creatorName }) {
             "id": id,
             "coverURL": coverURL,
             "title": title,
-            "creatorName": creatorName
+            "creatorName": creatorName,
+            "price": price
         }
         dispatch(addComicToCart(comicAttributes));
         
@@ -28,6 +29,7 @@ function ComicItem({ id, coverURL, title, creatorName }) {
                 </button>
                 <p className="LastComics__Title">{title}</p>
                 <p className="LastComics__Author">{creatorName}</p>
+                <p className="LastComics__Price">{price}  </p>
             </div>
         </div>
     )

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchLastComics } from '../services';
-import { Loader, ComicItem } from '../containers';
+import { Loader, ComicItem } from '../components';
 import '../styles/LastComics.css';
 
 
@@ -23,7 +23,9 @@ function LastComics() {
                 {
                 !error && !loading && comics.map((comic) => {
                     return(
-                        <ComicItem  id = {comic.id} coverURL={comic.coverURL} title={comic.title} creatorName={comic.creatorName} />
+                        <ComicItem  id = {comic.id} coverURL={comic.coverURL} 
+                            title={comic.title} creatorName={comic.creatorName} 
+                            price={comic.price} />
                         )
                     })
                 }
