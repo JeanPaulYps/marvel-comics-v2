@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import '../styles/Header.css';
 
 function Header() {
-    const totalComicsInCart = useSelector(state => state.shoppingCart.totalComicsInCart);
+    const comicsInCart = useSelector(state => state.shoppingCart.comicsInCart);
+    const totalComicsInCart = comicsInCart.reduce((total, comic) => total + comic.quantity, 0);
     return (
         <div className="Header__Container">
             <Link to="/">

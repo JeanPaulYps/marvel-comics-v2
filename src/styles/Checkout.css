@@ -27,8 +27,7 @@
 }
 
 .Item__Image {
-    height: 100%;
-    width: 125px;
+    height: 136px;
     background-color: turquoise;
     display: block;
 }
@@ -41,7 +40,7 @@
 
 .Item__Title {
     font-size: 32px;
-    font-weight: 600;
+    font-weight: bolder;
 }
 
 .Item__Author {
@@ -50,19 +49,19 @@
 }
 
 .Item__QuantityModification {
-    font-size: 36px;
+    font-size: 24px;
     font-family: Gothic A1;
     outline: 3px solid var(--light-pink);
     color: var(--light-pink);
-    height: 40px;
+    height: 32px;
     font-weight: bold;
     margin-left: auto;
     display: flex;
-    
+    align-items: center;
 }
 
 .Item__QuantityButton {
-    font-size: 36px;
+    font-size: 24px;
     font-weight: lighter;
     font-family: Gothic A1;
     border: 0;
@@ -92,8 +91,12 @@
 .Item__Price {
     font-family: Gothic A1;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: bold;
     margin-left: 80px;
+}
+
+.Item__Price::before{
+    content: "$";
 }
 
 .Summary {
@@ -103,9 +106,21 @@
     align-items: center;
 }
 
+.BackToHome {
+    text-decoration: none;
+}
+
 .BackToHome:hover {
     opacity: 0.7;
     cursor: pointer;
+}
+
+.BackToHome:visited {
+    color: var(--black);
+}
+
+.BackToHome {
+    text-decoration: none;
 }
 
 .BackToHome__Text {

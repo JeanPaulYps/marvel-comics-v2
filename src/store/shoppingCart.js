@@ -22,7 +22,16 @@ const shoppingCartSlice = createSlice({
             state.totalComicsInCart++;
         },
         deleteComicFromCart (state, { payload }) {
-            state.comicsInCart.filter(comic => comic.id !== payload.id);
+            state.comicsInCart = state.comicsInCart.filter(comic => comic.id !== payload);
+        },
+        addOneComic (state, {payload}) {
+            const comicIndex = state.comicsInCart.findIndex(comic => comic.id === payload);
+            state.comicsInCart[comicIndex].quantity++;
+        },
+        subtractOneComic (state, {payload}) {
+            const comicIndex = state.comicsInCart.findIndex(comic => comic.id === payload);
+            let comicQuantity = state.comicsInCart[comicIndex].quantity;
+            state.comicsInCart[comicIndex].quantity = (comicQuantity !== 1) ? comicQuantity-1 : 1;
         }
     }
 
