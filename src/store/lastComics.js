@@ -3,17 +3,15 @@ import { fetchLastComics } from "../services";
 
 
 const filterComicAttributesToShow = (comics) => {
-    let filteredComicAttributes = [];
-    for(const {id, title, thumbnail, creators, prices} of comics) {
+    const filteredComics = comics.map( ({id, title, thumbnail, creators, prices}) =>{
         const {extension, path: imagePath} = thumbnail;
         const creatorName = (creators.available > 0) ? creators.items[0].name : "Author not available";
         const coverURL = `${imagePath}.${extension}`;
         const price = (Array.isArray(prices) && !prices.length) ? "0" : prices[0].price;
         const filteredAttributes = {id: id, title: title, creatorName: creatorName, coverURL: coverURL, price: price };
-        filteredComicAttributes = [...filteredComicAttributes, filteredAttributes];
-
-    }
-    return filteredComicAttributes;
+        return filteredAttributes;
+    } );
+    return filteredComics;
 }
 
 

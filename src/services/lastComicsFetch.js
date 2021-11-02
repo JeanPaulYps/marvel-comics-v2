@@ -13,4 +13,4 @@ const fetchLastComics = createAsyncThunk(
     },
 )
 
-export { fetchLastComics, }
+export { fetchLastComics, };

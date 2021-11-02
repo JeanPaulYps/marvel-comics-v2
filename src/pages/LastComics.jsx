@@ -18,21 +18,19 @@ function LastComics() {
     },[dispatch])
     
     return (
-        <div>
-            <div className="LastComics">
-                {
-                !error && !loading && comics.map((comic) => {
-                    return(
-                        <ComicItem  id = {comic.id} coverURL={comic.coverURL} 
-                            title={comic.title} creatorName={comic.creatorName} 
-                            price={comic.price} />
-                        )
-                    })
-                }
-                {loading && <Loader/>}
-            </div>
+        <div className="LastComics">
+            {
+            !error && !loading && comics.map((comic) => {
+                return(
+                    <ComicItem  id = {comic.id} coverURL={comic.coverURL} 
+                        title={comic.title} creatorName={comic.creatorName} 
+                        price={comic.price} />
+                    )
+                })
+            }
+            {loading && <Loader/>}
         </div>
     )
 }
 
-export {LastComics, }   
+export {LastComics, };   

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import '../styles/Header.css';
 
 function Header() {
-    const shoppingCart = useSelector(state => state.shoppingCart.comicsInCart);
+    const totalComicsInCart = useSelector(state => state.shoppingCart.totalComicsInCart);
     return (
         <div className="Header__Container">
             <Link to="/">
@@ -22,7 +22,7 @@ function Header() {
                 <div >
                     <img src={`${process.env.PUBLIC_URL}/ShoppingCart.svg`} alt="" className="Header__Icon" />
                     <span className="Header__text"> Shopping cart </span>
-                    <span className="Header__Counter" >{shoppingCart.length} </span>
+                    <span className="Header__Counter" >{totalComicsInCart} </span>
                 </div>
             </Link>
 
