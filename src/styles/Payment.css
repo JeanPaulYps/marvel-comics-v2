@@ -9,6 +9,7 @@
     font-size: 40px;
     font-weight: normal;
     color: var(--black);
+    margin-bottom: 16px; 
 }
 
 .Payment__SubTitle {
@@ -16,6 +17,10 @@
     font-size: 32px;
     font-weight: normal;
     color: var(--light-blue);
+}
+
+.Payment__Section {
+    margin-bottom: 48px;
 }
 
 .Form__Title {
@@ -27,7 +32,8 @@
 }
 
 .Form__Label {
-    width: 45%;
+    width: 50%;
+    padding: 0 10px;
 }
 .Form__Input {
     border: none;
@@ -59,7 +65,7 @@
 
 .Form__Section {
     display: flex;
-    column-gap: 40px;
+    
     row-gap: 16px;
     margin: 16px 0;
     flex-wrap: wrap;
@@ -83,4 +89,9 @@
 
 .Form__Input--ExpirationDates:invalid {
     border-bottom: var(--light-red) solid 2px;
+}
+
+.NavigationButtons {
+    display: flex;
+    justify-content: space-between;
 }

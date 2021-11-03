@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "../styles/Payment.css";
 
 function Payment() {
@@ -11,39 +12,39 @@ function Payment() {
                     <h3 className="Form__Title">Contact information</h3>
                     <div className="Form__Section">
                         <label htmlFor="name" className="Form__Label" for="name" >
-                            <span className="Form__Text">Name and Last name</span>
-                            <input type="text" name="" id="name" className="Form__Input" />
+                            <span className="Form__Text">Name and last name</span>
+                            <input type="text" name="name" id="name" className="Form__Input" />
                         </label>
                         <label htmlFor="phone" className="Form__Label">
                             <span className="Form__Text">Phone Number</span>
-                            <input type="tel" id="phone" className="Form__Input" pattern="[0-9]*"/>
+                            <input type="tel" name="phone" id="phone" className="Form__Input" pattern="[0-9]*" />
                         </label>
                     </div>
                     <h3 className="Form__Title">Delivery information</h3>
                     <div className="Form__Section">
                         <label htmlFor="country" className="Form__Label">
                             <span className="Form__Text">Country</span>
-                            <input type="text" id="country" className="Form__Input" />
+                            <input type="text" name="country" id="country" className="Form__Input" />
                         </label>
-                        <label htmlFor="Address" className="Form__Label">
+                        <label htmlFor="address" className="Form__Label">
                             <span className="Form__Text">Address</span>
-                            <input type="text" className="Form__Input"/>
+                            <input type="text" name="address" className="Form__Input" id="address"/>
                         </label>
-                        <label htmlFor=""  className="Form__Label">
+                        <label htmlFor="additionalInformation"  className="Form__Label">
                             <span className="Form__Text">Additional information</span>
-                            <input type="text" className="Form__Input"/>
+                            <input type="text" name="additionalInformation" className="Form__Input" id="additionalInformation"/>
                         </label>
-                        <label htmlFor=""  className="Form__Label">
+                        <label htmlFor="city"  className="Form__Label">
                             <span className="Form__Text">City</span>
-                            <input type="text" className="Form__Input"/>
+                            <input type="text" name="city" className="Form__Input" id="city"/>
                         </label>
-                        <label htmlFor=""  className="Form__Label">
+                        <label htmlFor="state"  className="Form__Label">
                             <span className="Form__Text">State</span>
-                            <input type="text" className="Form__Input"/>
+                            <input type="text" name="state" className="Form__Input" id="state"/>
                         </label>
-                        <label htmlFor=""  className="Form__Label">
+                        <label htmlFor="zipCode"  className="Form__Label">
                             <span className="Form__Text">Zip Code</span>
-                            <input type="text" className="Form__Input" pattern="[0-9]*" />
+                            <input type="text" name="zipCode" className="Form__Input" pattern="[0-9]*" id="zipCode" />
                         </label>
                     </div>
                 </form>
@@ -63,17 +64,23 @@ function Payment() {
                     <label htmlFor="expirationDate" className="Form__Label">
                         <span className="Form__Text">Expiration Date</span>
                         <input type="number" id="expirationDate" className="Form__Input--ExpirationDates " min="1" max="12"/>
-                        <input type="number" id="expirationDate" className="Form__Input--ExpirationDates " min="00" max="99"/>
+                        <input type="number" className="Form__Input--ExpirationDates " min="00" max="99"/>
                     </label>
-                    <label htmlFor="nameOnCard" className="Form__Label">
+                    <label htmlFor="cvv" className="Form__Label">
                         <span className="Form__Text">CVV</span>
-                        <input type="text" id="expirationDate" className="Form__Input--ExpirationDates " pattern="[0-9]{3}"/>
+                        <input type="text" id="cvv" className="Form__Input--ExpirationDates " pattern="[0-9]{3}"/>
                     </label>
-
                 </div>
-
             </div>
-
+            <div className="NavigationButtons">
+                <Link className="BackToHome" to="/checkout">
+                    <img src={`${process.env.PUBLIC_URL}/ArrowBack.svg`} alt=""/>
+                    <span className="BackToHome__Text">Back to shopping cart</span>
+                </Link>
+                <Link to="/summary">
+                        <button className="ContinueOrder__Button">GO TO PAY</button>
+                </Link>
+            </div>
         </div>
     )
 }
