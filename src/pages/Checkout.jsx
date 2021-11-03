@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { CheckoutItem, OrderSummary } from '../components';
+import { Link } from 'react-router-dom';
 import "../styles/Checkout.css";
 
 function Checkout() {
@@ -13,7 +14,9 @@ function Checkout() {
                 {comicsInCart.map( (comic) => <CheckoutItem comic={comic} key={comic.id}/> )}
                 <OrderSummary total={total}/>
                 <div className="ContinueOrder">
-                    <button className="ContinueOrder__Button">CONTINUE ORDER</button>
+                    <Link to="/payment">
+                        <button className="ContinueOrder__Button">CONTINUE ORDER</button>
+                    </Link>
                 </div>
             </div>
         </div>
