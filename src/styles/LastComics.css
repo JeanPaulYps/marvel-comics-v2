@@ -1,0 +1,10 @@
+.LastComics {
+    display: grid;
+    width: 80vw;
+    margin: 48px auto;
+    grid-template-columns: repeat(auto-fit, 196px);
+    column-gap: 36px;
+    row-gap: 24px;
+    justify-content: center;
+}
+

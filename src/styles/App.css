@@ -1,18 +1,45 @@
  @font-face {
     font-family: 'League Gothic';
-    src: url("../fonts/LeagueGotic.otf");
+    src: url("./fonts/LeagueGotic.otf");
+} 
+
+@font-face {
+    font-family: 'Gothic A1';
+    src: url("./fonts/GothicA1-Regular.ttf");
+} 
+
+@font-face {
+    font-family: 'Gothic A1';
+    src: url("./fonts/GothicA1-SemiBold.ttf");
+    font-weight: 600;
+} 
+
+@font-face {
+    font-family: 'Gothic A1';
+    src: url("./fonts/GothicA1-ExtraBold.ttf");
+    font-weight: 800;
+} 
+
+@font-face {
+    font-family: 'Gothic A1';
+    src: url("./fonts/GothicA1-Light.ttf");
+    font-weight: 300;
 } 
 
 :root {
     --red: #EE171F;
+    --light-red: #ED2F36;
     --light-blue: #0A43B2;
     --dark-blue: #032059;
     --light-pink: #F2EAE4;
     --black: #212121;
+    --salmon: #E8A0A3;
+    
 }
 
 html {
     font-size: 62.5%;
+    background-color: var(--light-pink);
 }
 
 * {
