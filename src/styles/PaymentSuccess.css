@@ -1,0 +1,27 @@
+.Payment {
+    width: 80vw;
+    margin: 48px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Payment__Callout {
+    font-family: League Gothic;
+    font-size: 40px;
+    font-weight: normal;
+    color: var(--black);
+}
+
+.Payment__Text {
+    font-size: 24px;
+    font-family: Gothic A1;
+    font-weight: 400;
+    color: var(--black);
+}
+
+.Payment__CheckIcon {
+    height: 300px;
+    margin-bottom: 24px;
+
+}

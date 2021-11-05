@@ -26,9 +26,11 @@ function Summary() {
         shape: "pill",
         size: "responsive"
     };
-    const handleSuccess = () => {
-        dispatch(shoppingCartSlice.actions.clearCart());
-        history.push("/");
+    const handleSuccess = (data) => {
+        if (data.status === 'COMPLETED'){
+            dispatch(shoppingCartSlice.actions.clearCart());
+            history.push("/payment/success");
+        }
     };
 
     return (

@@ -5,7 +5,8 @@ import { HashRouter, Switch, Route } from "react-router-dom";
 import { Layout } from "./components";
 import { Checkout } from "./pages/Checkout";
 import { Payment } from "./pages/Payment";
-import { Summary } from "./pages/Summary"
+import { Summary } from "./pages/Summary";
+import { PaymentSuccess } from "./pages/PaymentSuccess";
 
 
 
@@ -19,6 +20,7 @@ function App() {
             <Route exact path="/checkout" component={Checkout}/>
             <Route exact path="/payment" component={Payment}/>
             <Route exact path="/summary" component={Summary}/>
+            <Route exact path="/payment/success" component={PaymentSuccess} />
           </Switch>
         </Layout>
       </HashRouter>
