@@ -49,29 +49,6 @@ function Payment() {
                     </div>
                 </form>
             </div>
-            <div className="Payment__Section">
-                <h2 className="Payment__SubTitle">Payment Details</h2>
-                <h3 className="Form__Title">Credit card information</h3>
-                <div className="Form__Section">
-                    <label htmlFor="creditCardNumber" className="Form__Label">
-                        <span className="Form__Text">Credit Card number</span>
-                        <input type="text" id="creditCardNumber"  className="Form__Input"/>
-                    </label>
-                    <label htmlFor="nameOnCard" className="Form__Label">
-                        <span className="Form__Text">Full name on card</span>
-                        <input type="text" id="nameOnCard"  className="Form__Input"/>
-                    </label>
-                    <label htmlFor="expirationDate" className="Form__Label">
-                        <span className="Form__Text">Expiration Date</span>
-                        <input type="number" id="expirationDate" className="Form__Input--ExpirationDates " min="1" max="12"/>
-                        <input type="number" className="Form__Input--ExpirationDates " min="00" max="99"/>
-                    </label>
-                    <label htmlFor="cvv" className="Form__Label">
-                        <span className="Form__Text">CVV</span>
-                        <input type="text" id="cvv" className="Form__Input--ExpirationDates " pattern="[0-9]{3}"/>
-                    </label>
-                </div>
-            </div>
             <div className="NavigationButtons">
                 <Link className="BackToHome" to="/checkout">
                     <img src={`${process.env.PUBLIC_URL}/ArrowBack.svg`} alt=""/>
