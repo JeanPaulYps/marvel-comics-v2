@@ -13,6 +13,12 @@ function Summary() {
         intent: 'capture',
         currency: 'USD'
     };
+    const style = {
+        layout: "vertical",
+        label: "pay",
+        shape: "pill",
+        size: "responsive"
+    }
 
     return (
         <div className="Content">
@@ -20,12 +26,14 @@ function Summary() {
             <div className="PaypalContainer">
                 <PayPalButton
                     paypalOptions={paypalOptions}
+                    style={style}
                     amount={total}
                     onSuccess={data => console.log(data)}
                     onError={error => console.log(error)}
                     onCancel={data => console.log(data)}
                 />
             </div>
+            
         </div>
     )
 }
