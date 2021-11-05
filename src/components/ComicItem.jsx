@@ -7,13 +7,7 @@ function ComicItem({ id, coverURL, title, creatorName, price }) {
     const dispatch = useDispatch();
     const { addComicToCart } = shoppingCartSlice.actions;
     const handleAddToCart = () => {    
-        const comicAttributes = {
-            "id": id,
-            "coverURL": coverURL,
-            "title": title,
-            "creatorName": creatorName,
-            "price": price
-        }
+        const comicAttributes = {id, coverURL, title, creatorName, price}
         dispatch(addComicToCart(comicAttributes));
         
         
