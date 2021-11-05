@@ -32,6 +32,9 @@ const shoppingCartSlice = createSlice({
             const comicIndex = state.comicsInCart.findIndex(comic => comic.id === payload);
             let comicQuantity = state.comicsInCart[comicIndex].quantity;
             state.comicsInCart[comicIndex].quantity = (comicQuantity !== 1) ? comicQuantity-1 : 1;
+        },
+        clearCart (state) {
+            state.comicsInCart = [];
         }
     }
 
