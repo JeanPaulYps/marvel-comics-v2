@@ -3,6 +3,13 @@ on:
   push:
     branches:
       - master
+
+env:
+  REACT_APP_PUBLIC_KEY: ${{ secrets.REACT_APP_PUBLIC_KEY }}
+  REACT_APP_PRIVATE_KEY: ${{ secrets.REACT_APP_PRIVATE_KEY }}
+  REACT_APP_PAYPAL_CLIENT_ID: ${{ secrets.REACT_APP_PAYPAL_CLIENT_ID }}
+
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -21,10 +28,7 @@ jobs:
       run: npm run build
     - name: Deploy to gh-pages
       uses: peaceiris/actions-gh-pages@v3
-      env:
-        REACT_APP_PUBLIC_KEY: ${{ secrets.REACT_APP_PUBLIC_KEY }}
-        REACT_APP_PRIVATE_KEY: ${{ secrets.REACT_APP_PRIVATE_KEY }}
-        REACT_APP_PAYPAL_CLIENT_ID: ${{ secrets.REACT_APP_PAYPAL_CLIENT_ID }}
+      
       with:
         GITHUB_TOKEN: ${{ secrets.DEPLOY_ACCESS }}
         publish_dir: ./build
