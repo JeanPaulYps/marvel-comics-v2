@@ -1,0 +1,98 @@
+.Payment {
+    width: 80vw;
+    margin: 48px auto;
+    font-family: Gothic A1;
+}
+
+.Payment__Title {
+    font-family: League Gothic;
+    font-size: 40px;
+    font-weight: normal;
+    color: var(--black);
+    margin-bottom: 16px; 
+}
+
+.Payment__SubTitle {
+    font-family: League Gothic;
+    font-size: 32px;
+    font-weight: normal;
+    color: var(--light-blue);
+}
+
+.Payment__Section {
+    margin-bottom: 48px;
+}
+
+.Form__Title {
+    font-family: League Gothic;
+    font-size: 24px;
+    font-weight: normal;
+    color: var(--black);
+    margin: 24px 0 0;
+}
+
+.Form__Label {
+    width: 50%;
+    padding: 0 10px;
+}
+.Form__Input {
+    border: none;
+    border-bottom: 1px solid rgba(92, 92, 92, 0.36);
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Gothic A1;
+    font-size: 16px;
+    font-weight: bold;
+    color: #484243; 
+    width: 100%;
+    margin-top: 8px;
+}
+
+.Form__Input:focus {
+    outline: none;
+}
+
+.Form__Input:invalid {
+    border-bottom: var(--light-red) solid 2px;
+}
+
+.Form__Text {
+    display: block;
+    font-size: 16px;
+    font-family: Gothic A1;
+    font-weight: bold;
+    color: var(--dark-blue);
+}
+
+.Form__Section {
+    display: flex;
+    
+    row-gap: 16px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+}
+
+.Form__Input--ExpirationDates {
+    border: none;
+    border-bottom: 1px solid rgba(92, 92, 92, 0.36);
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Gothic A1;
+    font-size: 16px;
+    font-weight: bold;
+    color: #484243; 
+    width: 40px;
+    margin-top: 8px;
+}
+
+.Form__Input--ExpirationDates:focus {
+    outline: none;
+}
+
+.Form__Input--ExpirationDates:invalid {
+    border-bottom: var(--light-red) solid 2px;
+}
+
+.NavigationButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
