@@ -2,6 +2,11 @@
     font-size: 0;
 }
 
+.LastComics__Item:hover {
+    opacity: 1;
+}
+
+
 .LastComics__Cover {
     width: 100%;
 }
