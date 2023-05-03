@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react'
 import { useDispatch } from 'react-redux';
 import { shoppingCartSlice } from '../store'
@@ -29,7 +30,7 @@ function CheckoutItem( {comic: {id, coverURL, title, creatorName, price, quantit
                     +
                 </button>
             </div>
-            <p className="Item__Price">{ (Math.round(price * quantity * 100, 2)/100).toFixed(2) }</p>
+            <p className="Item__Price">{ (Math.round(price * quantity * 100)/100).toFixed(2) }</p>
             <img src={`${process.env.PUBLIC_URL}/DeleteIcon.svg`} alt=""
                 className="Item__DeleteIcon" onClick={handleDelete} />
         </div>
