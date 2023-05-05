@@ -1,0 +1,10 @@
+.button {
+    font-family: League Gothic;
+    font-size: 24px;
+    text-align: center;
+    background-color: #1BC98A;
+    border: 0;
+    height: 80px;
+    width: 300px;
+    border-radius: 16px;
+}

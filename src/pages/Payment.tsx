@@ -2,6 +2,7 @@
 import React, { useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { Button } from '../components';
 import { buyerSlice } from '../store';
 import "../styles/Payment.css";
 
@@ -83,7 +84,7 @@ function Payment() {
                     <span className="BackToHome__Text">Back to shopping cart</span>
                 </Link>
                 <Link to="/summary">
-                        <button className="ContinueOrder__Button" onClick={handleContinueOrder}>GO TO PAY</button>
+                        <Button className="ContinueOrder__Button" onClick={handleContinueOrder}>GO TO PAY</Button>
                 </Link>
             </div>
         </div>

@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { CheckoutItem, OrderSummary } from '../components';
 import { Link } from 'react-router-dom';
 import "../styles/Checkout.css";
+import { Button } from '../components';
 
 function Checkout() {
     const comicsInCart = useSelector(state => state.shoppingCart.comicsInCart);
@@ -17,7 +18,7 @@ function Checkout() {
                 <OrderSummary total={total} totalItems={totalItems} />
                 <div className="ContinueOrder">
                     <Link to="/payment">
-                        <button className="ContinueOrder__Button">CONTINUE ORDER</button>
+                        <Button className="ContinueOrder__Button">CONTINUE ORDER</Button>
                     </Link>
                 </div>
             </div>

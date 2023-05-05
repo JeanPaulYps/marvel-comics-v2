@@ -1,10 +1,17 @@
-// @ts-nocheck
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { shoppingCartSlice } from '../store';
 import '../styles/ComicItem.css';
 
-function ComicItem({ id, coverURL, title, creatorName, price }) {
+type Props = {
+    id: number,
+    coverURL: string,
+    title: string,
+    creatorName: string, 
+    price: number
+}
+
+function ComicItem({ id, coverURL, title, creatorName, price }: Props) {
     const dispatch = useDispatch();
     const { addComicToCart } = shoppingCartSlice.actions;
     const handleAddToCart = () => {    

@@ -1,11 +1,11 @@
-// @ts-nocheck
+
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { useAppSelector } from '../hooks/hooks';
 import '../styles/Header.css';
 
 function Header() {
-    const comicsInCart = useSelector(state => state.shoppingCart.comicsInCart);
+    const comicsInCart = useAppSelector(state => state.shoppingCart.comicsInCart);
     const totalComicsInCart = comicsInCart.reduce((total, comic) => total + comic.quantity, 0);
     return (
         <div className="Header__Container">
