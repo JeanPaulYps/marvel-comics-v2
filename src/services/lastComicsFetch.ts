@@ -1,11 +1,10 @@
-// @ts-nocheck
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { marvelFetch } from "../services";
 
 const fetchLastComics = createAsyncThunk(
     'lastComics/fetchLastComics',
     async ()=>{
-        const request = await marvelFetch("comics", {
+        const request: any = await marvelFetch("comics", {
             "orderBy": "modified", 
             "format":"comic"
         });

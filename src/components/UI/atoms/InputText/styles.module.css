@@ -1,0 +1,32 @@
+.Form__Label {
+  width: 50%;
+  padding: 0 10px;
+}
+
+.Form__Input {
+  border: none;
+  border-bottom: 1px solid rgba(92, 92, 92, 0.36);
+  background-color: rgba(0, 0, 0, 0);
+  font-family: Gothic A1;
+  font-size: 16px;
+  font-weight: bold;
+  color: #484243;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.Form__Input:focus {
+  outline: none;
+}
+
+.Form__Input:invalid {
+  border-bottom: var(--light-red) solid 2px;
+}
+
+.Form__Text {
+  display: block;
+  font-size: 16px;
+  font-family: Gothic A1;
+  font-weight: bold;
+  color: var(--dark-blue);
+}

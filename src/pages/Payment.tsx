@@ -1,36 +1,38 @@
-// @ts-nocheck
-import React, { useRef } from 'react';
+    import React, { useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Button } from '../components';
+import { InputText } from '../components/UI/atoms/InputText/InputText';
 import { buyerSlice } from '../store';
 import "../styles/Payment.css";
 
 
 function Payment() {
-    const form = useRef(null);
+    const form = useRef<HTMLFormElement>(null);
     const dispatch = useDispatch();
     const handleContinueOrder = () => {
-        const formData = new FormData(form.current);
-        const name = formData.get("name");
-        const phone = formData.get("phone");
-        const country = formData.get("country");
-        const address = formData.get("address");
-        const additionalInformation = formData.get("additionalInformation");
-        const city = formData.get("city");
-        const state = formData.get("state");
-        const zipCode = formData.get("zipCode");
-        const buyerInformation = {
-            name, 
-            phone, 
-            country,
-            address,
-            additionalInformation,
-            city,
-            state,
-            zipCode
-        };
-        dispatch(buyerSlice.actions.addClientInformation(buyerInformation));
+        if (form.current){
+            const formData = new FormData(form.current);
+            const name = formData.get("name");
+            const phone = formData.get("phone");
+            const country = formData.get("country");
+            const address = formData.get("address");
+            const additionalInformation = formData.get("additionalInformation");
+            const city = formData.get("city");
+            const state = formData.get("state");
+            const zipCode = formData.get("zipCode");
+            const buyerInformation = {
+                name, 
+                phone, 
+                country,
+                address,
+                additionalInformation,
+                city,
+                state,
+                zipCode
+            };
+            dispatch(buyerSlice.actions.addClientInformation(buyerInformation));
+        }
     }
     return (
         <div className="Payment">
@@ -40,41 +42,17 @@ function Payment() {
                 <form action="#" ref={form}>
                     <h3 className="Form__Title">Contact information</h3>
                     <div className="Form__Section">
-                        <label htmlFor="name" className="Form__Label"  >
-                            <span className="Form__Text">Name and last name</span>
-                            <input type="text" name="name" id="name" className="Form__Input" />
-                        </label>
-                        <label htmlFor="phone" className="Form__Label">
-                            <span className="Form__Text">Phone Number</span>
-                            <input type="tel" name="phone" id="phone" className="Form__Input" pattern="[0-9]*" />
-                        </label>
+                        <InputText name='name' label="Name and last name" />
+                        <InputText name='phone' label="Phone Number" pattern='[0-9]*'/>
                     </div>
                     <h3 className="Form__Title">Delivery information</h3>
                     <div className="Form__Section">
-                        <label htmlFor="country" className="Form__Label">
-                            <span className="Form__Text">Country</span>
-                            <input type="text" name="country" id="country" className="Form__Input" />
-                        </label>
-                        <label htmlFor="address" className="Form__Label">
-                            <span className="Form__Text">Address</span>
-                            <input type="text" name="address" className="Form__Input" id="address"/>
-                        </label>
-                        <label htmlFor="additionalInformation"  className="Form__Label">
-                            <span className="Form__Text">Additional information</span>
-                            <input type="text" name="additionalInformation" className="Form__Input" id="additionalInformation"/>
-                        </label>
-                        <label htmlFor="city"  className="Form__Label">
-                            <span className="Form__Text">City</span>
-                            <input type="text" name="city" className="Form__Input" id="city"/>
-                        </label>
-                        <label htmlFor="state"  className="Form__Label">
-                            <span className="Form__Text">State</span>
-                            <input type="text" name="state" className="Form__Input" id="state"/>
-                        </label>
-                        <label htmlFor="zipCode"  className="Form__Label">
-                            <span className="Form__Text">Zip Code</span>
-                            <input type="text" name="zipCode" className="Form__Input" pattern="[0-9]*" id="zipCode" />
-                        </label>
+                        <InputText name="country" label="Country" />
+                        <InputText name="address" label="Address" />
+                        <InputText name="additionalInformation" label="Additional Information" />
+                        <InputText name="city" label="City" />
+                        <InputText name="state" label="State" />
+                        <InputText name="zipCode" label="Zip Code" pattern='[0-9]*' />
                     </div>
                 </form>
             </div>

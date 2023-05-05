@@ -4,7 +4,7 @@ import { shoppingCartSlice } from "../store";
 
 type Props = {
   comic: {
-    id: string;
+    id: number;
     coverURL: string;
     title: string;
     creatorName: string;
