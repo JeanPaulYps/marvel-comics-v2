@@ -1,8 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { Comic } from "../interfaces/Comic.interface";
 import { ComicRequest } from "../interfaces/ComicRequest.interface";
 import { fetchLastComics } from "../services";
 
-const filterComicAttributesToShow = (comics: ComicRequest[]) => {
+type LastComicsSlice = {
+  comics: Comic[],
+  loading: boolean,
+  error: boolean
+}
+
+const filterComicAttributesToShow = (comics: ComicRequest[]): Comic[] => {
   const filteredComics = comics.map(
     ({ id, title, thumbnail, creators, prices }) => {
       const { extension, path: imagePath } = thumbnail;
@@ -12,7 +19,7 @@ const filterComicAttributesToShow = (comics: ComicRequest[]) => {
           : "Author not available";
       const coverURL = `${imagePath}.${extension}`;
       const price =
-        Array.isArray(prices) && !prices.length ? "0" : prices[0].price;
+        Array.isArray(prices) && prices.length === 0 ? 0 : prices[0].price;
       const filteredAttributes = {
         id: id,
         title: title,
@@ -26,7 +33,7 @@ const filterComicAttributesToShow = (comics: ComicRequest[]) => {
   return filteredComics;
 };
 
-const initialState = {
+const initialState: LastComicsSlice = {
   comics: [],
   loading: false,
   error: false,

@@ -5,3 +5,5 @@ export { Layout } from "./Layout";
 export { CheckoutItem } from "./CheckoutItem";
 export { OrderSummary } from "./OrderSummary";
 export { Button } from "./UI/atoms/Button/Button";
+export { BridgePayPalButton } from "./UI/atoms/BridgePayPalButton/BridgePayPalButton";
+export { InputText } from "./UI/atoms/InputText/InputText";

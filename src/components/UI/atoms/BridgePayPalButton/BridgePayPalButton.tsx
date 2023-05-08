@@ -8,4 +8,4 @@ const BridgePayPalButton = (props: PayPalProps) =>  {
   )
 }
 
-export default BridgePayPalButton
+export {BridgePayPalButton};
