@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import { fetchLastComics } from "../services";
 import { Loader, ComicItem } from "../components";
-import "../styles/LastComics.css";
 import { useAppDispatch, useAppSelector } from "../hooks/hooks";
-import { Comic } from "../interfaces/Comic.interface";
+import { fetchLastComics } from "../services";
+import "../styles/LastComics.css";
+import type { Comic } from "../interfaces/Comic.interface";
 
 function LastComics() {
   const comics: Comic[] = useAppSelector((state) => state.lastComics.comics);
@@ -21,17 +21,16 @@ function LastComics() {
     <div className="LastComics">
       {!error &&
         !loading &&
-        comics.map((comic) => {
-          return (
-            <ComicItem
-              id={comic.id}
-              coverURL={comic.coverURL}
-              title={comic.title}
-              creatorName={comic.creatorName}
-              price={comic.price}
-            />
-          );
-        })}
+        comics.map((comic) => (
+          <ComicItem
+            key={comic.id}
+            id={comic.id}
+            coverURL={comic.coverURL}
+            title={comic.title}
+            creatorName={comic.creatorName}
+            price={comic.price}
+          />
+        ))}
       {loading && <Loader />}
     </div>
   );

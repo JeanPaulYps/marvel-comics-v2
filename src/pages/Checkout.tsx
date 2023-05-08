@@ -1,21 +1,20 @@
 import React from "react";
-import { CheckoutItem, OrderSummary } from "../components";
 import { Link } from "react-router-dom";
+import { CheckoutItem, OrderSummary, Button } from "../components";
 import "../styles/Checkout.css";
-import { Button } from "../components";
 import { useAppSelector } from "../hooks/hooks";
 
 function Checkout() {
   const comicsInCart = useAppSelector(
-    (state) => state.shoppingCart.comicsInCart
+    (state) => state.shoppingCart.comicsInCart,
   );
   const totalItems = comicsInCart.reduce(
     (total, comic) => total + comic.quantity,
-    0
+    0,
   );
   const total = comicsInCart.reduce(
     (total, comic) => total + comic.price * comic.quantity,
-    0
+    0,
   );
   return (
     <div className="Checkout">

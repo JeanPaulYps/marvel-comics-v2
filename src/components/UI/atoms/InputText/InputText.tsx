@@ -1,11 +1,12 @@
-import React, { InputHTMLAttributes } from "react";
+import React from "react";
+import type { InputHTMLAttributes } from "react";
 import "./styles.module.css";
 
 type NativeInputProps = InputHTMLAttributes<HTMLInputElement>;
 type CustomProps = {
-  name: InputHTMLAttributes<HTMLInputElement>["name"],
-  label: string,
-  labelClassName?: string | undefined,
+  name: InputHTMLAttributes<HTMLInputElement>["name"];
+  label: string;
+  labelClassName?: string | undefined;
 };
 type Props = NativeInputProps & CustomProps;
 
@@ -24,19 +25,11 @@ function InputText({
     : `${defaultLabelClassName} ${labelClassName}`;
   const inputStyles = !className
     ? defaultInputClassName
-    : `${defaultInputClassName} ${className}`
+    : `${defaultInputClassName} ${className}`;
   return (
-    <label
-      htmlFor={name}
-      className={labelStyles}
-    >
+    <label htmlFor={name} className={labelStyles}>
       <span className="Form__Text">{label}</span>
-      <input
-        type="text"
-        name={name}
-        className={inputStyles}
-        {...props}
-      />
+      <input type="text" name={name} className={inputStyles} {...props} />
     </label>
   );
 }

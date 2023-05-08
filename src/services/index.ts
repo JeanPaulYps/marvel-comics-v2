@@ -1,2 +1,2 @@
-export { marvelFetch } from './marvelFetch';
-export { fetchLastComics } from './lastComicsFetch';
+export { marvelFetch } from "./marvelFetch";
+export { fetchLastComics } from "./lastComicsFetch";

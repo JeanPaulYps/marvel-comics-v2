@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Comic } from "../interfaces/Comic.interface";
-import { ComicRequest } from "../interfaces/ComicRequest.interface";
 import { fetchLastComics } from "../services";
+import type { Comic } from "../interfaces/Comic.interface";
+import type { ComicRequest } from "../interfaces/ComicRequest.interface";
 
 type LastComicsSlice = {
-  comics: Comic[],
-  loading: boolean,
-  error: boolean
-}
+  comics: Comic[];
+  loading: boolean;
+  error: boolean;
+};
 
 const filterComicAttributesToShow = (comics: ComicRequest[]): Comic[] => {
   const filteredComics = comics.map(
@@ -28,7 +28,7 @@ const filterComicAttributesToShow = (comics: ComicRequest[]): Comic[] => {
         price: price,
       };
       return filteredAttributes;
-    }
+    },
   );
   return filteredComics;
 };

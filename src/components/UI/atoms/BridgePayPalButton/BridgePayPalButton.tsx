@@ -1,11 +1,8 @@
-import { PayPalButton, PayPalButtonProps } from "react-paypal-button-v2";
+import { PayPalButton } from "react-paypal-button-v2";
+import type { PayPalButtonProps } from "react-paypal-button-v2";
 
-type PayPalProps = PayPalButtonProps & {onCancel: (...args: any[]) => any};
+type PayPalProps = PayPalButtonProps & { onCancel: (...args: any[]) => any };
 
-const BridgePayPalButton = (props: PayPalProps) =>  {
-  return (
-    <PayPalButton {...props} />
-  )
-}
+const BridgePayPalButton = (props: PayPalProps) => <PayPalButton {...props} />;
 
-export {BridgePayPalButton};
+export { BridgePayPalButton };

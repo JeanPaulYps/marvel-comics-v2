@@ -1,58 +1,56 @@
-.LastComics__Item {    
-    font-size: 0;
+.LastComics__Item {
+  font-size: 0;
 }
 
 .LastComics__Item:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
-
 .LastComics__Cover {
-    width: 100%;
+  width: 100%;
 }
 
 .AddToCartButton:hover {
-    background-color: var(--light-red);
-    cursor: pointer;
+  background-color: var(--light-red);
+  cursor: pointer;
 }
 
 .AddToCartButton {
-    width: 100%;
-    height: 32px;
-    border: 0px;
-    background-color: var(--red);
-    font-family: League Gothic;
-    font-size: 24px;
-    color: var(--black);
+  width: 100%;
+  height: 32px;
+  border: 0px;
+  background-color: var(--red);
+  font-family: League Gothic;
+  font-size: 24px;
+  color: var(--black);
 }
 
 .AddToCartButton__CartIcon {
-    width: 16px;
-    margin-right: 16px;
+  width: 16px;
+  margin-right: 16px;
 }
 
 .LastComics__Title {
-    font-size: 18px;
-    font-family: Gothic A1;
-    font-weight: bolder;
-    margin: 16px 0 8px;
-    color: var(--black);
+  font-size: 18px;
+  font-family: Gothic A1;
+  font-weight: bolder;
+  margin: 16px 0 8px;
+  color: var(--black);
 }
 
 .LastComics__Author {
-    font-size: 18px;
-    font-family: Gothic A1;
-    color: var(--black);
-} 
+  font-size: 18px;
+  font-family: Gothic A1;
+  color: var(--black);
+}
 
 .LastComics__Price {
-    font-size: 16px;
-    font-family: Gothic A1;
-    color: var(--black);
-    font-weight: 600;
-} 
+  font-size: 16px;
+  font-family: Gothic A1;
+  color: var(--black);
+  font-weight: 600;
+}
 
-.LastComics__Price::before
-{
-    content: "$ ";
+.LastComics__Price::before {
+  content: "$ ";
 }
