@@ -11,11 +11,12 @@ function LastComics() {
   const loading = useAppSelector((state) => state.lastComics.loading);
   const dispatch = useAppDispatch();
   useEffect(() => {
-    const getData = async () => {
+    const getData = () => {
       dispatch(fetchLastComics());
     };
     getData();
-  }, [dispatch]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="LastComics">

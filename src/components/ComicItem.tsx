@@ -1,23 +1,16 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { shoppingCartSlice } from '../store';
-import '../styles/ComicItem.css';
+import React from "react";
+import { useDispatch } from "react-redux";
+import { shoppingCartSlice } from "../store";
+import "../styles/ComicItem.css";
+import type { Comic } from "../interfaces/Comic.interface";
 
-type Props = {
-    id: number,
-    coverURL: string,
-    title: string,
-    creatorName: string, 
-    price: number
-}
-
-function ComicItem({ id, coverURL, title, creatorName, price }: Props) {
-    const dispatch = useDispatch();
-    const { addComicToCart } = shoppingCartSlice.actions;
-    const handleAddToCart = () => {    
-        const comicAttributes = {id, coverURL, title, creatorName, price}
-        dispatch(addComicToCart(comicAttributes));    
-    };
+function ComicItem({ id, coverURL, title, creatorName, price }: Comic) {
+  const dispatch = useDispatch();
+  const { addComicToCart } = shoppingCartSlice.actions;
+  const handleAddToCart = () => {
+    const comicAttributes = { id, coverURL, title, creatorName, price };
+    dispatch(addComicToCart(comicAttributes));
+  };
 
     return (
         <div className="LastComics__Item" key={id}>

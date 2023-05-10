@@ -1,16 +1,17 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { shoppingCartSlice } from "../store";
+import type { ShoppingComicsCart } from "../interfaces/Comic.interface";
 
 type Props = {
-  comic: {
-    id: number;
-    coverURL: string;
-    title: string;
-    creatorName: string;
-    price: number;
-    quantity: number;
-  };
+  comic: ShoppingComicsCart,
+  //   id: number;
+  //   coverURL: string;
+  //   title: string;
+  //   creatorName: string;
+  //   price: number;
+  //   quantity: number;
+  // };
 };
 
 function CheckoutItem({
