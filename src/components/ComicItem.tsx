@@ -1,4 +1,3 @@
-import React from "react";
 import { useDispatch } from "react-redux";
 import { shoppingCartSlice } from "../store";
 import "../styles/ComicItem.css";

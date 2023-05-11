@@ -1,4 +1,3 @@
-import React from "react";
 import { Header } from ".";
 import type { PropsWithChildren } from "react";
 

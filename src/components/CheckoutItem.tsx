@@ -1,4 +1,3 @@
-import React from "react";
 import { useDispatch } from "react-redux";
 import { shoppingCartSlice } from "../store";
 import type { ShoppingComicsCart } from "../interfaces/Comic.interface";
@@ -21,7 +20,7 @@ function CheckoutItem({
     dispatch(shoppingCartSlice.actions.subtractOneComic(id));
   };
   const roundedPrice = (Math.round(price * quantity * 100) / 100).toFixed(2);
-  
+
   return (
     <div className="Item">
       <img src={coverURL} alt="" className="Item__Image" />
