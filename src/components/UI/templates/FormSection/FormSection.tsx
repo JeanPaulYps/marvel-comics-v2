@@ -1,5 +1,6 @@
-import React, { AllHTMLAttributes, PropsWithChildren } from "react";
+import React from "react";
 import styles from "./styles.module.css";
+import type { AllHTMLAttributes, PropsWithChildren } from "react";
 
 type Props = AllHTMLAttributes<HTMLDivElement>;
 

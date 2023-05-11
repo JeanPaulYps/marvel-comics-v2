@@ -1,6 +1,6 @@
 import React from "react";
-import type { InputHTMLAttributes } from "react";
 import styles from "./styles.module.css";
+import type { InputHTMLAttributes } from "react";
 
 type NativeInputProps = InputHTMLAttributes<HTMLInputElement>;
 type CustomProps = {
@@ -20,20 +20,14 @@ function InputText({
   labelClassName,
   ...props
 }: Props) {
-  const labelStyles = `${defaultLabelClassName} ${labelClassName || ""}`.trimEnd();
+  const labelStyles = `${defaultLabelClassName} ${
+    labelClassName || ""
+  }`.trimEnd();
   const inputStyles = `${defaultInputClassName} ${className || ""}`.trimEnd();
   return (
-    <label
-      htmlFor={name}
-      className={labelStyles}
-    >
+    <label htmlFor={name} className={labelStyles}>
       <span className={styles.Text}>{label}</span>
-      <input
-        type="text"
-        name={name}
-        className={inputStyles}
-        {...props}
-      />
+      <input type="text" name={name} className={inputStyles} {...props} />
     </label>
   );
 }

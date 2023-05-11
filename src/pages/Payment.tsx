@@ -33,39 +33,48 @@ function Payment() {
       };
       dispatch(buyerSlice.actions.addClientInformation(buyerInformation));
     }
-    return (
-        <div className="Payment">
-            <h1 className="Payment__Title">Payment</h1>
-            <div className="Payment__Section">
-                <h2 className="Payment__SubTitle">Delivery Details</h2>
-                <form action="#" ref={form}>
-                    <h3 className="Form__Title">Contact information</h3>
-                    <FormSection>
-                        <InputText name='name' label="Name and last name" />
-                        <InputText name='phone' label="Phone Number" pattern='[0-9]*'/>
-                    </FormSection>
-                    <h3 className="Form__Title">Delivery information</h3>
-                    <FormSection>
-                        <InputText name="country" label="Country" />
-                        <InputText name="address" label="Address" />
-                        <InputText name="additionalInformation" label="Additional Information" />
-                        <InputText name="city" label="City" />
-                        <InputText name="state" label="State" />
-                        <InputText name="zipCode" label="Zip Code" pattern='[0-9]*' />
-                    </FormSection>
-                </form>
-            </div>
-            <div className="NavigationButtons">
-                <Link className="BackToHome" to="/checkout">
-                    <img src={`${process.env.PUBLIC_URL}/ArrowBack.svg`} alt=""/>
-                    <span className="BackToHome__Text">Back to shopping cart</span>
-                </Link>
-                <Link to="/summary">
-                        <Button className="ContinueOrder__Button" onClick={handleContinueOrder}>GO TO PAY</Button>
-                </Link>
-            </div>
-        </div>
-    )
+  };
+  return (
+    <div className="Payment">
+      <h1 className="Payment__Title">Payment</h1>
+      <div className="Payment__Section">
+        <h2 className="Payment__SubTitle">Delivery Details</h2>
+        <form action="#" ref={form}>
+          <h3 className="Form__Title">Contact information</h3>
+          <FormSection>
+            <InputText name="name" label="Name and last name" />
+            <InputText name="phone" label="Phone Number" pattern="[0-9]*" />
+          </FormSection>
+          <h3 className="Form__Title">Delivery information</h3>
+          <FormSection>
+            <InputText name="country" label="Country" />
+            <InputText name="address" label="Address" />
+            <InputText
+              name="additionalInformation"
+              label="Additional Information"
+            />
+            <InputText name="city" label="City" />
+            <InputText name="state" label="State" />
+            <InputText name="zipCode" label="Zip Code" pattern="[0-9]*" />
+          </FormSection>
+        </form>
+      </div>
+      <div className="NavigationButtons">
+        <Link className="BackToHome" to="/checkout">
+          <img src={`${process.env.PUBLIC_URL}/ArrowBack.svg`} alt="" />
+          <span className="BackToHome__Text">Back to shopping cart</span>
+        </Link>
+        <Link to="/summary">
+          <Button
+            className="ContinueOrder__Button"
+            onClick={handleContinueOrder}
+          >
+            GO TO PAY
+          </Button>
+        </Link>
+      </div>
+    </div>
+  );
 }
 
 export { Payment };
