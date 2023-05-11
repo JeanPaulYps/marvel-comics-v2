@@ -1,18 +1,18 @@
 .LastComics {
-    display: grid;
-    width: 80vw;
-    margin: 48px auto;
-    grid-template-columns: repeat(auto-fit, 196px);
-    column-gap: 36px;
-    row-gap: 24px;
-    justify-content: center;
-    transition: opacity 300ms;
+  display: grid;
+  width: 80vw;
+  margin: 48px auto;
+  grid-template-columns: repeat(auto-fit, 196px);
+  column-gap: 36px;
+  row-gap: 24px;
+  justify-content: center;
+  transition: opacity 300ms;
 }
 
 .LastComics:hover .LastComics__Item:not(:hover) {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 
-.LastComics__Item{
-    transition: opacity 300ms;
+.LastComics__Item {
+  transition: opacity 300ms;
 }

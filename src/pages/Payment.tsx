@@ -1,39 +1,37 @@
-    import React, { useRef } from 'react';
-import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { Button } from '../components';
-import { InputText } from '../components/UI/atoms/InputText/InputText';
-import { FormSection } from '../components/UI/templates';
-import { buyerSlice } from '../store';
+import React, { useRef } from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { Button } from "../components";
+import { InputText } from "../components/UI/atoms/InputText/InputText";
+import { FormSection } from "../components/UI/templates";
+import { buyerSlice } from "../store";
 import "../styles/Payment.css";
 
-
 function Payment() {
-    const form = useRef<HTMLFormElement>(null);
-    const dispatch = useDispatch();
-    const handleContinueOrder = () => {
-        if (form.current){
-            const formData = new FormData(form.current);
-            const name = formData.get("name");
-            const phone = formData.get("phone");
-            const country = formData.get("country");
-            const address = formData.get("address");
-            const additionalInformation = formData.get("additionalInformation");
-            const city = formData.get("city");
-            const state = formData.get("state");
-            const zipCode = formData.get("zipCode");
-            const buyerInformation = {
-                name, 
-                phone, 
-                country,
-                address,
-                additionalInformation,
-                city,
-                state,
-                zipCode
-            };
-            dispatch(buyerSlice.actions.addClientInformation(buyerInformation));
-        }
+  const form = useRef<HTMLFormElement>(null);
+  const dispatch = useDispatch();
+  const handleContinueOrder = () => {
+    if (form.current) {
+      const formData = new FormData(form.current);
+      const name = formData.get("name");
+      const phone = formData.get("phone");
+      const country = formData.get("country");
+      const address = formData.get("address");
+      const additionalInformation = formData.get("additionalInformation");
+      const city = formData.get("city");
+      const state = formData.get("state");
+      const zipCode = formData.get("zipCode");
+      const buyerInformation = {
+        name,
+        phone,
+        country,
+        address,
+        additionalInformation,
+        city,
+        state,
+        zipCode,
+      };
+      dispatch(buyerSlice.actions.addClientInformation(buyerInformation));
     }
     return (
         <div className="Payment">
@@ -70,4 +68,4 @@ function Payment() {
     )
 }
 
-export { Payment, };
+export { Payment };

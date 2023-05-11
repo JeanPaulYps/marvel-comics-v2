@@ -12,4 +12,4 @@ const Button = ({ children, className, ...props }: PropsWithChildren<ButtonNativ
   );
 };
 
-export { Button, };
+export { Button };

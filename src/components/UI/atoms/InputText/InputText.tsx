@@ -1,11 +1,12 @@
-import React, { InputHTMLAttributes } from "react";
+import React from "react";
+import type { InputHTMLAttributes } from "react";
 import styles from "./styles.module.css";
 
 type NativeInputProps = InputHTMLAttributes<HTMLInputElement>;
 type CustomProps = {
-  name: InputHTMLAttributes<HTMLInputElement>["name"],
-  label: string,
-  labelClassName?: string | undefined,
+  name: InputHTMLAttributes<HTMLInputElement>["name"];
+  label: string;
+  labelClassName?: string | undefined;
 };
 type Props = NativeInputProps & CustomProps;
 
