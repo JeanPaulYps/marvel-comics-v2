@@ -3,7 +3,7 @@ import { OrderSummary, BridgePayPalButton} from "../components";
 import "../styles/Summary.css"
 import { useDispatch } from 'react-redux';
 import { shoppingCartSlice } from '../store';
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 import { useAppSelector } from '../hooks/hooks';
 
 

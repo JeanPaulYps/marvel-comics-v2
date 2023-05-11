@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Button } from '../components';
 import { InputText } from '../components/UI/atoms/InputText/InputText';
+import { FormSection } from '../components/UI/templates';
 import { buyerSlice } from '../store';
 import "../styles/Payment.css";
 
@@ -41,19 +42,19 @@ function Payment() {
                 <h2 className="Payment__SubTitle">Delivery Details</h2>
                 <form action="#" ref={form}>
                     <h3 className="Form__Title">Contact information</h3>
-                    <div className="Form__Section">
+                    <FormSection>
                         <InputText name='name' label="Name and last name" />
                         <InputText name='phone' label="Phone Number" pattern='[0-9]*'/>
-                    </div>
+                    </FormSection>
                     <h3 className="Form__Title">Delivery information</h3>
-                    <div className="Form__Section">
+                    <FormSection>
                         <InputText name="country" label="Country" />
                         <InputText name="address" label="Address" />
                         <InputText name="additionalInformation" label="Additional Information" />
                         <InputText name="city" label="City" />
                         <InputText name="state" label="State" />
                         <InputText name="zipCode" label="Zip Code" pattern='[0-9]*' />
-                    </div>
+                    </FormSection>
                 </form>
             </div>
             <div className="NavigationButtons">

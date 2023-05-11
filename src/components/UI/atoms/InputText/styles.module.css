@@ -1,9 +1,9 @@
-.Form__Label {
-  width: 50%;
+.Label {
+  width: 100%;
   padding: 0 10px;
 }
 
-.Form__Input {
+.Input {
   border: none;
   border-bottom: 1px solid rgba(92, 92, 92, 0.36);
   background-color: rgba(0, 0, 0, 0);
@@ -15,15 +15,16 @@
   margin-top: 8px;
 }
 
-.Form__Input:focus {
+.Input:focus {
   outline: none;
+  border-bottom: var(--light-blue) solid 1px;
 }
 
-.Form__Input:invalid {
+.Input:invalid {
   border-bottom: var(--light-red) solid 2px;
 }
 
-.Form__Text {
+.Text {
   display: block;
   font-size: 16px;
   font-family: Gothic A1;

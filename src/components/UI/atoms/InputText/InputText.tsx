@@ -1,5 +1,5 @@
 import React, { InputHTMLAttributes } from "react";
-import "./styles.module.css";
+import styles from "./styles.module.css";
 
 type NativeInputProps = InputHTMLAttributes<HTMLInputElement>;
 type CustomProps = {
@@ -9,8 +9,8 @@ type CustomProps = {
 };
 type Props = NativeInputProps & CustomProps;
 
-const defaultLabelClassName = "Form__Label";
-const defaultInputClassName = "Form__Input";
+const defaultLabelClassName = styles.Label;
+const defaultInputClassName = styles.Input;
 
 function InputText({
   name,
@@ -19,18 +19,14 @@ function InputText({
   labelClassName,
   ...props
 }: Props) {
-  const labelStyles = !labelClassName
-    ? defaultLabelClassName
-    : `${defaultLabelClassName} ${labelClassName}`;
-  const inputStyles = !className
-    ? defaultInputClassName
-    : `${defaultInputClassName} ${className}`
+  const labelStyles = `${defaultLabelClassName} ${labelClassName || ""}`.trimEnd();
+  const inputStyles = `${defaultInputClassName} ${className || ""}`.trimEnd();
   return (
     <label
       htmlFor={name}
       className={labelStyles}
     >
-      <span className="Form__Text">{label}</span>
+      <span className={styles.Text}>{label}</span>
       <input
         type="text"
         name={name}

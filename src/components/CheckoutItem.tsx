@@ -4,14 +4,7 @@ import { shoppingCartSlice } from "../store";
 import type { ShoppingComicsCart } from "../interfaces/Comic.interface";
 
 type Props = {
-  comic: ShoppingComicsCart,
-  //   id: number;
-  //   coverURL: string;
-  //   title: string;
-  //   creatorName: string;
-  //   price: number;
-  //   quantity: number;
-  // };
+  comic: ShoppingComicsCart;
 };
 
 function CheckoutItem({
@@ -27,6 +20,8 @@ function CheckoutItem({
   const handleSubtractComic = () => {
     dispatch(shoppingCartSlice.actions.subtractOneComic(id));
   };
+  const roundedPrice = (Math.round(price * quantity * 100) / 100).toFixed(2);
+  
   return (
     <div className="Item">
       <img src={coverURL} alt="" className="Item__Image" />
@@ -43,9 +38,7 @@ function CheckoutItem({
           +
         </button>
       </div>
-      <p className="Item__Price">
-        {(Math.round(price * quantity * 100) / 100).toFixed(2)}
-      </p>
+      <p className="Item__Price">{roundedPrice}</p>
       <img
         src={`${process.env.PUBLIC_URL}/DeleteIcon.svg`}
         alt=""

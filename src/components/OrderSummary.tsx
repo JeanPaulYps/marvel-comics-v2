@@ -7,6 +7,7 @@ type Props = {
 };
 
 function OrderSummary({ total, totalItems }: Props) {
+  const roundedTotal = (Math.round(total * 100) / 100).toFixed(2);
   return (
     <div className="Summary">
       <Link className="BackToHome" to="/">
@@ -16,9 +17,7 @@ function OrderSummary({ total, totalItems }: Props) {
       <div className="Summary__Container">
         <div className="Summary__ContainerTotal">
           <div className="Summary__Text">Total</div>
-          <div className="Summary__Total">
-            {(Math.round(total * 100) / 100).toFixed(2)}
-          </div>
+          <div className="Summary__Total">{roundedTotal}</div>
         </div>
         <div className="Summary__ItemsCount">{totalItems} items</div>
       </div>
