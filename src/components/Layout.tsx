@@ -1,9 +1,7 @@
-// @ts-nocheck
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 import { Header } from ".";
 
-
-function Layout({children}) {
+function Layout({children} : PropsWithChildren): JSX.Element {
     return (
         <>
             <Header/>

@@ -1,4 +1,3 @@
-// @ts-nocheck
 import md5 from 'md5';
 import axios from 'axios';
 
@@ -7,7 +6,7 @@ const URL = "https://gateway.marvel.com:443/v1/public"
 const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
 const PRIVATE_KEY = process.env.REACT_APP_PRIVATE_KEY;
 
-const marvelFetch = async (route, additionalParameters) => {
+const marvelFetch = async (route:string, additionalParameters: Record<string, unknown>) => {
     const timeStamp = Date.now();
     const hash = md5(`${timeStamp}${PRIVATE_KEY}${PUBLIC_KEY}`);
 

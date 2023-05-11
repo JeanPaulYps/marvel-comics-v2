@@ -1,0 +1,7 @@
+.Section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 16px;
+  margin: 16px 0;
+}

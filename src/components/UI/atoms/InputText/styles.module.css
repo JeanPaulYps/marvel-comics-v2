@@ -1,0 +1,33 @@
+.Label {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.Input {
+  border: none;
+  border-bottom: 1px solid rgba(92, 92, 92, 0.36);
+  background-color: rgba(0, 0, 0, 0);
+  font-family: Gothic A1;
+  font-size: 16px;
+  font-weight: bold;
+  color: #484243;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.Input:focus {
+  outline: none;
+  border-bottom: var(--light-blue) solid 1px;
+}
+
+.Input:invalid {
+  border-bottom: var(--light-red) solid 2px;
+}
+
+.Text {
+  display: block;
+  font-size: 16px;
+  font-family: Gothic A1;
+  font-weight: bold;
+  color: var(--dark-blue);
+}
